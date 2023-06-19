@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Seefood</string>
+    <string name="seefood">SEEFOOD</string>
+    <string name="the_shazam_for_food">\"The Shazam for Food\"</string>
+    <string name="let_s_get_started">Let\'s Get Started</string>
+    <string name="touch_to_seefood">Touch to SEEFOOD</string>
+    <string name="hotdog">Hotdog</string>
+    <string name="not_hotdog">Not Hotdog</string>
+</resources>
