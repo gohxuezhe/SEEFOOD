@@ -5,19 +5,24 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <ImageView
-        android:id="@+id/image_view"
+        android:id="@+id/picture_taken"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        />
+        android:scaleType="fitXY"
+        android:contentDescription="@string/picture_taken_by_user" />
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/hotdog"/>
+        android:visibility="invisible"
+        android:background="@drawable/hotdog"
+        android:contentDescription="@string/it_is_a_hotdog" />
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:visibility="invisible"
         android:background="@drawable/not_hotdog"
-        android:layout_alignParentBottom="true"/>
+        android:layout_alignParentBottom="true"
+        android:contentDescription="@string/it_is_not_a_hotdog" />
 </RelativeLayout>
