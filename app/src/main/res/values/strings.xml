@@ -6,4 +6,8 @@
     <string name="touch_to_seefood">Touch to SEEFOOD</string>
     <string name="hotdog">Hotdog</string>
     <string name="not_hotdog">Not Hotdog</string>
+    <string name="picture_taken_by_user">Picture taken by user</string>
+    <string name="it_is_a_hotdog">It is a hotdog</string>
+    <string name="it_is_not_a_hotdog">It is not a hotdog</string>
+    <string name="app_background">App background</string>
 </resources>

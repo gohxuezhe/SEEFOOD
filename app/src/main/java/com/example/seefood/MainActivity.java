@@ -10,6 +10,9 @@ import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.view.View;
+import android.view.animation.AlphaAnimation;
+import android.view.animation.Animation;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -22,6 +25,7 @@ import java.io.FileOutputStream;
 
 public class MainActivity extends AppCompatActivity {
     RelativeLayout layout;
+    View gradient;
     TextView get_started;
     TextView touch_to_seefood;
     Button camera_button;
@@ -34,12 +38,18 @@ public class MainActivity extends AppCompatActivity {
 
         getPermission();
 
-        layout = findViewById(R.id.layout);
+        layout = findViewById(R.id.main_activity);
+        gradient = findViewById(R.id.gradient);
         get_started = findViewById(R.id.get_started);
         camera_button = findViewById(R.id.camera_button);
         touch_to_seefood = findViewById(R.id.touch_to_seefood);
 
         layout.setOnClickListener(view -> {
+            final Animation out = new AlphaAnimation(1.0f, 0.0f);
+            out.setDuration(500);
+            gradient.setAnimation(out);
+            gradient.setVisibility(INVISIBLE);
+
             get_started.setVisibility(INVISIBLE);
             camera_button.setVisibility(VISIBLE);
             touch_to_seefood.setVisibility(VISIBLE);
@@ -95,4 +105,5 @@ public class MainActivity extends AppCompatActivity {
             requestPermissions(new String[]{Manifest.permission.CAMERA}, 11);
         }
     }
+
 }
